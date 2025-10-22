@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Document - PT Koneksi TrackMe</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.0/github-markdown.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <style>
+        .markdown-body {
+            box-sizing: border-box;
+            min-width: 200px;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 45px;
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+        .markdown-container {
+            padding: 3rem 1.5rem;
+            background: #f9fafb;
+            min-height: 60vh;
+        }
+        .loading {
+            text-align: center;
+            padding: 4rem;
+            color: #6b7280;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="page-header">
+        <div class="container">
+            <nav class="nav">
+                <a href="../../index.html" class="nav-brand">
+                    <span class="icon">🏢</span>
+                    <span>PT Koneksi TrackMe</span>
+                </a>
+                <div class="nav-links">
+                    <a href="../../vision.html">Vision</a>
+                    <a href="../../brainstorming.html">Brainstorming</a>
+                    <a href="../../philosophy.html">Philosophy</a>
+                    <a href="https://github.com/konxc/trackme">GitHub</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Markdown Content -->
+    <div class="markdown-container">
+        <div id="markdown-content" class="markdown-body loading">
+            <p>Loading document...</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>
+                    <strong>PT Koneksi Jaringan Indonesia</strong> • 
+                    Gotong Royong untuk Indonesia Kompetitif & Sehat
+                </p>
+                <p class="copyright">© 2025 PT Koneksi. Untuk Anak Cucu Indonesia 🇮🇩</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Get markdown file from URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const mdFile = urlParams.get('file');
+        
+        if (mdFile) {
+            // Fetch and render markdown
+            fetch(mdFile)
+                .then(response => response.text())
+                .then(markdown => {
+                    // Configure marked
+                    marked.setOptions({
+                        breaks: true,
+                        gfm: true,
+                        headerIds: true
+                    });
+                    
+                    // Render markdown
+                    document.getElementById('markdown-content').innerHTML = marked.parse(markdown);
+                    
+                    // Extract title from first h1
+                    const firstH1 = document.querySelector('#markdown-content h1');
+                    if (firstH1) {
+                        document.getElementById('page-title').textContent = firstH1.textContent + ' - PT Koneksi TrackMe';
+                    }
+                })
+                .catch(error => {
+                    document.getElementById('markdown-content').innerHTML = `
+                        <div style="text-align: center; padding: 4rem;">
+                            <p style="font-size: 4rem;">📄</p>
+                            <h2>Document Not Found</h2>
+                            <p>The requested document could not be loaded.</p>
+                            <a href="../../index.html" class="btn btn-primary" style="margin-top: 2rem;">
+                                Back to Home
+                            </a>
+                        </div>
+                    `;
+                });
+        } else {
+            document.getElementById('markdown-content').innerHTML = `
+                <div style="text-align: center; padding: 4rem;">
+                    <p style="font-size: 4rem;">❓</p>
+                    <h2>No Document Specified</h2>
+                    <p>Please provide a document parameter.</p>
+                    <a href="../../index.html" class="btn btn-primary" style="margin-top: 2rem;">
+                        Back to Home
+                    </a>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>
+
