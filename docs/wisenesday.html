@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisenesday™ Methodology - PT Koneksi TrackMe</title>
+    <meta name="description" content="Wisenesday: Joyful weekly evaluation methodology - Make Wednesday your wisdom day!">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.0/github-markdown.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="page-header">
+        <div class="container">
+            <nav class="nav">
+                <a href="./" class="nav-brand">
+                    <span class="icon">🏢</span>
+                    <span>PT Koneksi TrackMe</span>
+                </a>
+                <div class="nav-links">
+                    <a href="./vision.html">Vision</a>
+                    <a href="./brainstorming.html">Brainstorming</a>
+                    <a href="./philosophy.html">Philosophy</a>
+                    <a href="./about.html">About</a>
+                    <a href="https://github.com/konxc/trackme">GitHub</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Markdown Content -->
+    <div class="markdown-container">
+        <div id="markdown-content" class="markdown-body">
+            <p style="text-align: center; padding: 2rem; color: #6b7280;">Loading Wisenesday™ documentation...</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>
+                    <strong>PT Koneksi Jaringan Indonesia</strong> • 
+                    Gotong Royong untuk Indonesia Kompetitif & Sehat
+                </p>
+                <p class="copyright">© 2025 PT Koneksi. Untuk Anak Cucu Indonesia 🇮🇩</p>
+            </div>
+        </div>
+    </footer>
+
+    <style>
+        .markdown-container {
+            padding: 3rem 1.5rem;
+            background: #f9fafb;
+            min-height: 60vh;
+        }
+        .markdown-body {
+            box-sizing: border-box;
+            min-width: 200px;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 45px;
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+    </style>
+
+    <script>
+        fetch('./WISENESDAY-TERMINOLOGY.md')
+            .then(response => response.text())
+            .then(markdown => {
+                marked.setOptions({
+                    breaks: true,
+                    gfm: true,
+                    headerIds: true
+                });
+                document.getElementById('markdown-content').innerHTML = marked.parse(markdown);
+            })
+            .catch(error => {
+                document.getElementById('markdown-content').innerHTML = `
+                    <div style="text-align: center; padding: 4rem;">
+                        <p style="font-size: 4rem;">📄</p>
+                        <h2>Error Loading Document</h2>
+                        <p>Could not load Wisenesday documentation.</p>
+                        <a href="./" class="btn btn-primary" style="margin-top: 2rem;">Back to Home</a>
+                    </div>
+                `;
+            });
+    </script>
+</body>
+</html>
+
