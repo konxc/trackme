@@ -75,10 +75,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Happy Wisenesday message (if today is Wednesday)
   const today = new Date().getDay();
-  if (today === 3) { // Wednesday
+  const isLandingPage = window.location.pathname.endsWith('/') || 
+                        window.location.pathname.endsWith('/index.html') ||
+                        window.location.pathname.includes('/trackme/') && 
+                        !window.location.pathname.match(/\w+\.html$/);
+  
+  if (today === 3 && isLandingPage) { // Wednesday AND landing page only
     console.log('🌟 Happy Wisenesday! Time to get wiser! 🌟');
     
-    // Show special badge
+    // Show special badge (only on landing page)
     const badge = document.createElement('div');
     badge.innerHTML = '🌟 Happy Wisenesday!';
     badge.style.cssText = `
