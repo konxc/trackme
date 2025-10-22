@@ -1,9 +1,29 @@
 # PT Koneksi Jaringan Indonesia - Vision & Innovation Portfolio
 
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live-success)](https://konxc.github.io/trackme)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)
+[![Wisenesday](https://img.shields.io/badge/Methodology-Wisenesday%E2%84%A2-yellow)](./WISENESDAY-TERMINOLOGY.md)
+
 **Company Website:** https://konxc.space  
 **GitHub Pages:** https://konxc.github.io/trackme  
 **Philosophy:** Gotong Royong untuk Indonesia Kompetitif & Sehat  
 **Commitment:** Generational Investment
+
+---
+
+## 🌟 Wisenesday™ Corporate Portfolio
+
+**Ini bukan portfolio biasa.**
+
+Ini adalah **living vision portfolio** yang:
+- 📜 Menunjukkan bagaimana kami berpikir (vision logs)
+- 💡 Transparan dalam ideation (brainstorming sessions)
+- 🤝 Konsisten dengan filosofi (gotong royong manifesto)
+- 📊 Diupdate setiap minggu (Wisenesday cycle!)
+- 🇮🇩 Untuk ekosistem Indonesia (generational investment)
+
+**Portfolio tradisional:** "Ini yang sudah kami buat"  
+**Portfolio Wisenesday:** "Ini bagaimana kami berkembang setiap minggu" 🌟
 
 ---
 
@@ -37,6 +57,27 @@
 - ✅ **"Ini bukti konsistensi"** (weekly logs, measurable)
 
 **Update:** Setiap minggu (seperti Rabu Ekstrim, tapi corporate!)
+
+---
+
+## 🚀 QUICK ACCESS
+
+**📱 GitHub Pages Portfolio:**
+- 🏠 [Home](https://konxc.github.io/trackme/) - Landing page
+- 🏢 [About](https://konxc.github.io/trackme/about.html) - Company, products, impact
+- 📜 [Vision](https://konxc.github.io/trackme/vision.html) - Weekly vision logs
+- 💡 [Brainstorming](https://konxc.github.io/trackme/brainstorming.html) - Ideation sessions
+- 🤝 [Philosophy](https://konxc.github.io/trackme/philosophy.html) - Gotong royong manifesto
+
+**📚 Key Documents:**
+- 🌟 [Wisenesday™ Terminology](./WISENESDAY-TERMINOLOGY.md) - Joyful methodology
+- 🤝 [Gotong Royong Manifesto](./philosophy/GOTONG-ROYONG-MANIFESTO.md) - Core philosophy
+- 🌱 [Origin Story](./origin/ORIGIN-STORY.md) - How TrackMe began
+- 📜 [Week 43 Vision](./vision/2025/10-October/week-43-trackme-genesis.md) - Genesis session
+
+**⚙️ Production:**
+- 🔧 [TrackMe Ecosystem](https://github.com/konxc/trackme-ecosystem) - Monorepo (to be built)
+- 🌱 [Personal Origin](https://github.com/sandikodev/trackme) - Sandi's portfolio
 
 ---
 
